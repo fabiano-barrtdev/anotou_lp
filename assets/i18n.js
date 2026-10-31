@@ -1,10 +1,10 @@
 /*
- * Anotou? — alternância de idioma (PT/EN).
- * Carregado no <head>, sem defer, para aplicar o idioma antes da página
- * aparecer (sem "piscar" o idioma errado). Sem dependências, sem cookies.
+ * Anotou? — language switch (PT/EN).
+ * Loaded in <head> without defer so the language applies before the page
+ * renders (no flash of the wrong language). No dependencies, no cookies.
  *
- * Ordem de escolha: ?lang=pt|en na URL > escolha salva > navigator.language
- * (pt* = português, qualquer outro = inglês).
+ * Priority: ?lang=pt|en in the URL > saved choice > navigator.language
+ * (pt* = Portuguese, anything else = English).
  */
 (function () {
   'use strict';
@@ -30,7 +30,7 @@
   }
 
   function store(l) {
-    try { window.localStorage.setItem(KEY, l); } catch (e) { /* modo privado etc. */ }
+    try { window.localStorage.setItem(KEY, l); } catch (e) { /* private mode etc. */ }
   }
 
   function detect() {
@@ -47,7 +47,7 @@
   var lang = fromUrl || readStored() || detect();
   if (fromUrl) store(fromUrl);
 
-  // Atributos que não dá para alternar com CSS (alt, aria-label).
+  // Attributes CSS can't switch (alt, aria-label).
   function syncDom() {
     var nodes = document.querySelectorAll('[data-alt-pt],[data-label-pt]');
     for (var i = 0; i < nodes.length; i++) {
@@ -81,7 +81,7 @@
 
   apply(lang);
 
-  // Imagens ainda não colocadas: mostra o espaço reservado com o nome do arquivo.
+  // Images not added yet: show the placeholder with the file name.
   function markMissing(img) {
     var holder = img.closest ? img.closest('[data-ph]') : null;
     if (holder) holder.classList.add('is-missing');
@@ -106,12 +106,34 @@
       if (!next || next === lang) return;
       apply(next);
       store(next);
-      // Se a URL trouxe ?lang=, atualiza para não voltar ao idioma antigo ao recarregar.
+      // If the URL had ?lang=, update it so a reload doesn't revert to the old language.
       if (readUrl() && window.history && window.history.replaceState) {
         var url = new URL(window.location.href);
         url.searchParams.set('lang', next);
         window.history.replaceState(null, '', url.toString());
       }
     });
+  });
+})();
+
+/*
+ * When the site is opened straight from disk (file://), the browser lists a
+ * folder instead of opening its index.html. Only in that case, internal links
+ * that point to folders ("terms/", "../", "../#faq") get "index.html" appended.
+ * Nothing changes on GitHub Pages (http/https).
+ */
+(function () {
+  if (location.protocol !== 'file:') return;
+  document.addEventListener('DOMContentLoaded', function () {
+    var links = document.querySelectorAll('a[href]');
+    for (var i = 0; i < links.length; i++) {
+      var href = links[i].getAttribute('href');
+      if (/^([a-z]+:|#|\/\/)/i.test(href)) continue; // external, e-mail and same-page anchors
+      var cut = href.search(/[?#]/);
+      var path = cut < 0 ? href : href.slice(0, cut);
+      var rest = cut < 0 ? '' : href.slice(cut);
+      if (path === '' || path === '.' || path === '..') path += (path ? '/' : './');
+      if (path.slice(-1) === '/') links[i].setAttribute('href', path + 'index.html' + rest);
+    }
   });
 })();
