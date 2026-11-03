@@ -472,3 +472,7 @@ button.lc:hover { border-color: var(--a-green-2); }
   .item.is-new { animation: demo-pop 1.4s ease; }
   @keyframes demo-pop { 0% { background: var(--a-chip); } 100% { background: transparent; } }
 }
+
+/* Premium block (reuses the old "coming soon" layout with a solid border) */
+.soon.is-premium { border-style: solid; background: var(--surface); }
+.soon.is-premium .soon-item .icon { background: var(--primary-soft); color: var(--primary); }

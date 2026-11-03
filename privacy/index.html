@@ -67,26 +67,34 @@
   <div class="wrap">
     <article class="prose" lang="pt-BR">
 <h1>Política de privacidade</h1>
-<p class="meta">App Anotou? · Última atualização: 31 de outubro de 2026</p>
+<p class="meta">App Anotou? · Última atualização: 2 de novembro de 2026</p>
 <p>Esta política explica, em linguagem simples, quais dados o app Anotou? usa, para quê e com quem eles são compartilhados.</p>
 
 <h2>Quem cuida dos seus dados</h2>
 <p>O controlador dos dados é Barr Tecnologia, CNPJ 34.671.720/0001-09. Para qualquer assunto de privacidade, escreva para privacidade@getanotou.app.</p>
+<p>Somos um agente de tratamento de pequeno porte e, como permite a Resolução CD/ANPD nº 2/2022, não indicamos um encarregado de dados. Esse e-mail é o nosso canal de atendimento a você.</p>
 
 <h2>Dados da sua conta</h2>
 <p>Você entra no Anotou? com sua conta Google ou Apple. Pelo login, recebemos seu <strong>nome</strong>, seu <strong>e-mail</strong> e sua <strong>foto</strong>. Você pode trocar o nome e a foto no app.</p>
 <p>Também guardamos as preferências do seu perfil: <strong>país</strong>, <strong>moeda</strong> e <strong>idioma</strong>.</p>
 
 <h2>O que você coloca nas listas</h2>
-<p>Guardamos as listas, os itens (nome, quantidade, categoria e valores), os membros, os convites e o histórico de atividade de cada lista.</p>
+<p>Guardamos as listas, os itens (nome, quantidade, categoria e valores), os membros, os convites, as notas fiscais importadas (veja a seção própria) e o histórico de atividade de cada lista.</p>
 <div class="callout"><p><strong>Importante:</strong> tudo o que está numa lista é visível para todos os membros dela.</p></div>
+
+<h2>Racha da conta</h2>
+<p>Quando uma lista usa o racha da conta, guardamos quem pagou cada item, quanto cada membro deve e os pagamentos marcados como feitos. Essas informações são visíveis para os membros da lista.</p>
+<p>Se você cadastrar uma chave Pix no seu perfil, ela é mostrada aos membros das listas em que você participa de um racha, para que possam te pagar. O app só permite copiar a chave; o pagamento acontece fora do Anotou?.</p>
+
+<h2>Contatos</h2>
+<p>Quando alguém entra numa lista pelo seu link de convite, essa pessoa passa a aparecer nos seus contatos, mesmo que depois saia da lista. Você também pode enviar e aceitar pedidos de contato e remover contatos. Seus contatos podem ser adicionados às suas listas por um convite dentro do app, que a pessoa aceita ou recusa. Guardamos essas ligações, os pedidos e os convites pendentes.</p>
 
 <h2>Quem está vendo a lista agora</h2>
 <p>Quando você abre uma lista, os outros membros podem ver que você está nela naquele momento. Essa informação não é guardada como histórico.</p>
 
 <h2>Câmera, galeria e microfone</h2>
 <ul>
-  <li><strong>Câmera:</strong> para ler o código de barras de produtos e para tirar sua foto de perfil.</li>
+  <li><strong>Câmera:</strong> para ler o código de barras de produtos e o QR code da nota fiscal, e para tirar sua foto de perfil. A leitura dos códigos é feita no próprio aparelho.</li>
   <li><strong>Galeria:</strong> para escolher sua foto de perfil.</li>
   <li><strong>Microfone e reconhecimento de fala:</strong> para adicionar itens por voz. O app usa o reconhecimento de fala do próprio sistema do aparelho (Apple ou Google), que pode processar o áudio segundo as regras desses fornecedores.</li>
 </ul>
@@ -94,15 +102,53 @@
 <h2>Leitura de código de barras</h2>
 <p>O código lido é consultado no Open Food Facts por meio do nosso servidor. Os dados do produto ficam guardados para consultas futuras.</p>
 
+<h2>Importar nota fiscal (NFC-e)</h2>
+<p>Em listas em reais, você pode importar a nota fiscal de uma compra (NFC-e) lendo o QR code do cupom. É um recurso pago (veja os <a href="../terms/">Termos de uso</a>) e funciona com as notas dos estados suportados pelo app.</p>
+<h3>Como funciona</h3>
+<ol>
+  <li><strong>Leitura no aparelho.</strong> A câmera lê o QR code no próprio aparelho. No Android, essa leitura usa o Google ML Kit (veja “Com quem compartilhamos”).</li>
+  <li><strong>Consulta à Secretaria da Fazenda.</strong> Seu aparelho abre a página pública da Secretaria da Fazenda (SEFAZ) indicada no QR code. Essa consulta vai direto do seu aparelho ao site do governo, que recebe dados técnicos da conexão, como seu endereço IP.</li>
+  <li><strong>Limpeza antes de enviar.</strong> Antes de mandar qualquer coisa ao nosso servidor, o app remove da página o CPF e o nome do consumidor, campos ocultos e o texto livre do cupom (que pode trazer o nome do operador de caixa e o final do cartão), e mascara qualquer CPF que tenha sobrado. O conteúdo limpo vai por conexão criptografada ao nosso servidor, que extrai os itens e devolve. Esse conteúdo não é gravado; o servidor registra apenas o resultado da leitura, o estado e tamanhos.</li>
+  <li><strong>Você confere.</strong> Nada é gravado antes de você revisar e confirmar a importação.</li>
+</ol>
+<h3>O que guardamos</h3>
+<ul>
+  <li>Da nota: chave de acesso (identifica o documento fiscal e contém o CNPJ da loja, a data e o número da nota), nome e endereço da loja como vieram na nota, data e hora de emissão, total, desconto, quantidade de itens, quem importou e quando.</li>
+  <li>Dos itens: descrição, código interno da loja, quantidade, unidade, preço unitário, total, o que você decidiu fazer com cada item (marcar um item da lista, criar um item ou ignorar) e o valor pago aplicado ao item.</li>
+  <li>Um cadastro de lojas, comum a todos os usuários, com CNPJ, razão social e endereço, como publicados pela própria empresa na nota. Quando a empresa é individual, a razão social pode incluir o nome do titular. Esse cadastro só se liga a você pelas notas das suas listas.</li>
+</ul>
+<p><strong>O que nunca guardamos:</strong> CPF e nome do consumidor, forma de pagamento, texto livre do cupom, o conteúdo da página da SEFAZ e cookies da SEFAZ.</p>
+<p><strong>Quem vê:</strong> todos os membros da lista veem quem importou, a loja, a data, o total, a quantidade de itens e os itens marcados como comprados, com o valor pago. O app avisa isso antes de você confirmar.</p>
+<p><strong>Dados sensíveis:</strong> não usamos os itens das notas para deduzir informações sobre você, como dados de saúde a partir de compras em farmácia.</p>
+<p><strong>Dados técnicos:</strong> para corrigir falhas, registramos sobre cada leitura, sem identificar você: estado, formato da página, resultado, motivo de falha, uma impressão digital da estrutura da página (sem nenhum texto da nota), tamanho, quantidade de itens e duração. Esses registros são apagados após 90 dias. Para evitar abuso, também contamos quantas leituras de nota e consultas de código de barras cada pessoa faz por minuto, hora e dia, sem guardar o que foi lido. Essas contagens são apagadas após 2 dias.</p>
+<p><strong>Por quanto tempo:</strong> os dados da nota ficam enquanto a lista existir. Eles são apagados quando você remove a importação, apaga a lista ou exclui sua conta. O cadastro de lojas permanece.</p>
+
+<h2>Compras no app</h2>
+<p>Quando você faz uma compra no app (assinatura do Premium ou passe de uma lista), tratamos: o identificador interno da sua conta no Anotou?, o produto comprado, a data, o estado e a validade da assinatura ou do passe, a loja de origem e identificadores da transação.</p>
+<p>Não recebemos nem armazenamos dados de cartão ou de outros meios de pagamento: o pagamento é processado inteiramente pela Apple ou pelo Google.</p>
+<p>Usamos esses dados para liberar os recursos comprados, permitir restaurar compras, prevenir fraude e atender solicitações de suporte. A base legal é a execução de contrato (LGPD, art. 7º, V).</p>
+
 <h2>Com quem compartilhamos</h2>
 <p>Usamos estes fornecedores para o app funcionar:</p>
 <ul>
   <li><strong>Supabase:</strong> banco de dados, login e armazenamento de arquivos.</li>
-  <li><strong>Google e Apple:</strong> login.</li>
+  <li><strong>Google e Apple:</strong> login e, como lojas de aplicativos, processamento dos pagamentos das compras no app.</li>
+  <li><strong>Google (ML Kit), só no Android:</strong> a leitura de códigos de barras e QR codes usa o ML Kit, que roda no aparelho. As imagens da câmera não são enviadas ao Google, mas o ML Kit envia ao Google métricas técnicas de uso e desempenho (por exemplo, modelo do aparelho, versão do app, tempos, erros e um identificador da instalação), que o Google usa para manter e melhorar o ML Kit, segundo as regras dele. No iOS, a leitura usa o recurso do próprio sistema da Apple.</li>
+  <li><strong>RevenueCat, Inc.:</strong> gerencia o estado das assinaturas e das compras no app. Com o RevenueCat compartilhamos apenas o identificador interno da sua conta (não seu nome nem seu e-mail) e os dados da transação informados pela loja.</li>
   <li><strong>Open Food Facts:</strong> dados de produtos.</li>
   <li><strong>Google Workspace:</strong> e-mail de suporte.</li>
   <li><strong>PostHog:</strong> análise de uso e relatório de erros, sem gravação de tela.</li>
 </ul>
+<p>Na importação de nota fiscal, a consulta à SEFAZ parte do seu próprio aparelho, a seu pedido (veja a seção “Importar nota fiscal”).</p>
+
+<h2>Transferência internacional</h2>
+<p>Alguns dos fornecedores acima tratam dados fora do Brasil:</p>
+<ul>
+  <li><strong>Supabase:</strong> nos Estados Unidos.</li>
+  <li><strong>PostHog:</strong> na União Europeia.</li>
+  <li><strong>RevenueCat, Apple e Google</strong> (inclusive o Google Workspace): em especial nos Estados Unidos.</li>
+</ul>
+<p>Essas transferências seguem as salvaguardas previstas na LGPD (arts. 33 e seguintes).</p>
 
 <h2>Anúncios e venda de dados</h2>
 <p>O Anotou? não tem anúncios e não vende seus dados.</p>
@@ -115,7 +161,24 @@
   <li>Os itens que você comprou continuam nas listas dos outros membros, identificados como “Conta excluída”.</li>
   <li>Sua foto, seu nome e seu acesso são apagados.</li>
 </ul>
+<p>Alguns registros têm prazo próprio, independentemente da conta: os registros técnicos da leitura de notas são apagados após 90 dias; as contagens de uso, após 2 dias; e os registros de acesso da nossa infraestrutura (como endereço IP e horário das requisições), mantidos pelo Supabase, após até 7 dias.</p>
+<p>Sobre as compras no app, quando você exclui a conta:</p>
+<ul>
+  <li>Apagamos o registro do seu Premium e o histórico de eventos de compra vinculado à sua conta.</li>
+  <li>Pedimos ao RevenueCat que exclua seus dados de assinante.</li>
+  <li>Os passes de lista que você comprou continuam valendo para a lista, sem nenhum vínculo com você.</li>
+  <li>Os registros de pagamento mantidos pela Apple ou pelo Google seguem as políticas dessas empresas.</li>
+</ul>
+<div class="callout"><p><strong>Importante:</strong> excluir a conta não cancela a assinatura na loja. Cancele nas configurações de assinaturas da App Store ou do Google Play.</p></div>
 <p>Veja como excluir na página <a href="../delete-account/">Excluir conta</a>.</p>
+
+<h2>Bases legais</h2>
+<p>Tratamos seus dados com base na LGPD:</p>
+<ul>
+  <li><strong>Execução de contrato (art. 7º, V):</strong> para oferecer o que você usa no app: conta, listas, membros, convites, contatos, quem está vendo a lista, racha da conta e chave Pix, leitura de código de barras, importação de nota fiscal e compras no app.</li>
+  <li><strong>Legítimo interesse (art. 7º, IX):</strong> para manter o serviço seguro e funcionando: limites de uso contra abuso, registros técnicos para corrigir falhas, métricas técnicas do ML Kit e análise de uso do app. Nesses casos, você pode se opor ao tratamento pelo e-mail abaixo.</li>
+  <li><strong>Cumprimento de obrigação legal (art. 7º, II):</strong> quando a lei nos obrigar a guardar algum dado.</li>
+</ul>
 
 <h2>Seus direitos</h2>
 <p>Pela Lei Geral de Proteção de Dados (LGPD, art. 18), você pode pedir:</p>
@@ -124,38 +187,47 @@
   <li>correção de dados incompletos, inexatos ou desatualizados;</li>
   <li>exclusão dos seus dados;</li>
   <li>informação sobre com quem seus dados são compartilhados;</li>
-  <li>revogação do consentimento.</li>
+  <li>revogação do consentimento;</li>
+  <li>oposição a tratamentos feitos com base no legítimo interesse.</li>
 </ul>
-<p>Faça seu pedido pelo e-mail privacidade@getanotou.app.</p>
+<p>Faça seu pedido pelo e-mail privacidade@getanotou.app. Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
 
 <h2>Idade</h2>
 <p>O Anotou? não é destinado a menores de 16 anos.</p>
 
 <h2>Contato</h2>
-<p>Dúvidas sobre privacidade: privacidade@getanotou.app.</p>
+<p>Dúvidas sobre privacidade, inclusive dúvidas ou solicitações sobre dados de compras: privacidade@getanotou.app.</p>
     </article>
     <article class="prose" lang="en">
 <h1>Privacy policy</h1>
-<p class="meta">Anotou? app · Last updated: October 31, 2026</p>
+<p class="meta">Anotou? app · Last updated: November 2, 2026</p>
 <p>This policy explains, in plain language, what data the Anotou? app uses, what for, and who it is shared with.</p>
 
 <h2>Who looks after your data</h2>
 <p>The data controller is Barr Tecnologia, CNPJ 34.671.720/0001-09. For any privacy matter, write to privacidade@getanotou.app.</p>
+<p>We are a small-scale processing agent and, as allowed by ANPD Resolution CD/ANPD No. 2/2022, we have not appointed a data protection officer. That email address is our channel for you.</p>
 
 <h2>Your account data</h2>
 <p>You sign in to Anotou? with your Google or Apple account. Through sign-in we receive your <strong>name</strong>, <strong>email</strong> and <strong>photo</strong>. You can change your name and photo in the app.</p>
 <p>We also store your profile preferences: <strong>country</strong>, <strong>currency</strong> and <strong>language</strong>.</p>
 
 <h2>What you put on your lists</h2>
-<p>We store lists, items (name, quantity, category and prices), members, invites and each list’s activity history.</p>
+<p>We store lists, items (name, quantity, category and prices), members, invites, imported receipts (see their own section) and each list’s activity history.</p>
 <div class="callout"><p><strong>Important:</strong> everything on a list is visible to all of its members.</p></div>
+
+<h2>Bill splitting</h2>
+<p>When a list uses bill splitting, we store who paid for each item, how much each member owes and the payments marked as made. This information is visible to the list’s members.</p>
+<p>If you add a Pix key to your profile, it is shown to members of the lists where you take part in a bill split, so they can pay you. The app only lets them copy the key; payment happens outside Anotou?.</p>
+
+<h2>Contacts</h2>
+<p>When someone joins a list through your invite link, that person appears in your contacts, even if they later leave the list. You can also send and accept contact requests and remove contacts. Your contacts can be added to your lists through an in-app invite, which they accept or decline. We store these connections, the requests and pending invites.</p>
 
 <h2>Who is viewing the list right now</h2>
 <p>When you open a list, other members can see that you are on it at that moment. This information is not kept as history.</p>
 
 <h2>Camera, photo library and microphone</h2>
 <ul>
-  <li><strong>Camera:</strong> to scan product barcodes and to take your profile photo.</li>
+  <li><strong>Camera:</strong> to scan product barcodes and the receipt QR code, and to take your profile photo. Codes are read on the device itself.</li>
   <li><strong>Photo library:</strong> to choose your profile photo.</li>
   <li><strong>Microphone and speech recognition:</strong> to add items by voice. The app uses your device’s built-in speech recognition (Apple or Google), which may process the audio under those providers’ own rules.</li>
 </ul>
@@ -163,15 +235,53 @@
 <h2>Barcode scanning</h2>
 <p>The scanned code is looked up on Open Food Facts through our server. The product data is stored for future lookups.</p>
 
+<h2>Import a receipt (NFC-e)</h2>
+<p>In lists in Brazilian reais, you can import a purchase receipt (NFC-e) by scanning the receipt’s QR code. It is a paid feature (see the <a href="../terms/">Terms of use</a>) and works with receipts from the states the app supports.</p>
+<h3>How it works</h3>
+<ol>
+  <li><strong>Reading on the device.</strong> The camera reads the QR code on the device itself. On Android, this uses Google ML Kit (see “Who we share data with”).</li>
+  <li><strong>Request to the state tax office.</strong> Your device opens the public page of the state tax office (SEFAZ) indicated in the QR code. This request goes straight from your device to the government website, which receives technical connection data such as your IP address.</li>
+  <li><strong>Cleanup before sending.</strong> Before sending anything to our server, the app removes the consumer’s CPF and name, hidden fields and the receipt’s free text (which may include the cashier’s name and the last digits of the card), and masks any remaining CPF. The cleaned content goes over an encrypted connection to our server, which extracts the items and sends them back. This content is not stored; the server only records the result of the scan, the state and sizes.</li>
+  <li><strong>You review it.</strong> Nothing is saved until you review and confirm the import.</li>
+</ol>
+<h3>What we store</h3>
+<ul>
+  <li>From the receipt: the access key (identifies the tax document and contains the store’s CNPJ, the date and the receipt number), the store’s name and address as shown on the receipt, issue date and time, total, discount, number of items, who imported it and when.</li>
+  <li>From the items: description, store item code, quantity, unit, unit price, total, what you chose to do with each item (check a list item, create an item or ignore it) and the paid amount applied to the item.</li>
+  <li>A store directory, shared by all users, with CNPJ, legal name and address, as published by the company itself on the receipt. For sole-proprietor businesses, the legal name may include the owner’s name. This directory only connects to you through the receipts on your lists.</li>
+</ul>
+<p><strong>What we never store:</strong> the consumer’s CPF and name, payment method, the receipt’s free text, the SEFAZ page content and SEFAZ cookies.</p>
+<p><strong>Who sees it:</strong> all list members see who imported it, the store, the date, the total, the number of items and the items marked as bought, with the paid amount. The app tells you this before you confirm.</p>
+<p><strong>Sensitive data:</strong> we don’t use receipt items to infer information about you, such as health data from pharmacy purchases.</p>
+<p><strong>Technical data:</strong> to fix failures, we record for each scan, without identifying you: state, page format, result, failure reason, a fingerprint of the page’s structure (with no receipt text), size, number of items and duration. These records are deleted after 90 days. To prevent abuse, we also count how many receipt scans and barcode lookups each person makes per minute, hour and day, without storing what was scanned. These counts are deleted after 2 days.</p>
+<p><strong>How long:</strong> receipt data is kept while the list exists. It is deleted when you remove the import, delete the list or delete your account. The store directory remains.</p>
+
+<h2>In-app purchases</h2>
+<p>When you make a purchase in the app (a Premium subscription or a list’s pass), we process: your internal Anotou? account identifier, the product purchased, the date, the status and expiry of the subscription or pass, the store it came from, and transaction identifiers.</p>
+<p>We do not receive or store card details or any other payment method data: payment is handled entirely by Apple or Google.</p>
+<p>We use this data to unlock the features you bought, let you restore purchases, prevent fraud and handle support requests. The legal basis is the performance of a contract (LGPD, Article 7, V).</p>
+
 <h2>Who we share data with</h2>
 <p>We use these providers to run the app:</p>
 <ul>
   <li><strong>Supabase:</strong> database, sign-in and file storage.</li>
-  <li><strong>Google and Apple:</strong> sign-in.</li>
+  <li><strong>Google and Apple:</strong> sign-in and, as app stores, payment processing for in-app purchases.</li>
+  <li><strong>Google (ML Kit), Android only:</strong> barcode and QR code reading uses ML Kit, which runs on the device. Camera images are not sent to Google, but ML Kit sends Google technical usage and performance metrics (such as device model, app version, timings, errors and an installation identifier), which Google uses to maintain and improve ML Kit under its own rules. On iOS, reading uses Apple’s built-in system feature.</li>
+  <li><strong>RevenueCat, Inc.:</strong> manages the status of subscriptions and in-app purchases. With RevenueCat we share only your internal account identifier (not your name or email) and the transaction data reported by the store.</li>
   <li><strong>Open Food Facts:</strong> product data.</li>
   <li><strong>Google Workspace:</strong> support email.</li>
   <li><strong>PostHog:</strong> usage analytics and error reporting, without screen recording.</li>
 </ul>
+<p>When you import a receipt, the request to SEFAZ comes from your own device, at your request (see “Import a receipt”).</p>
+
+<h2>International transfers</h2>
+<p>Some of the providers above process data outside Brazil:</p>
+<ul>
+  <li><strong>Supabase:</strong> in the United States.</li>
+  <li><strong>PostHog:</strong> in the European Union.</li>
+  <li><strong>RevenueCat, Apple and Google</strong> (including Google Workspace): especially in the United States.</li>
+</ul>
+<p>These transfers follow the safeguards set out in the LGPD (Articles 33 onward).</p>
 
 <h2>Ads and selling data</h2>
 <p>Anotou? has no ads and does not sell your data.</p>
@@ -184,7 +294,24 @@
   <li>Items you bought stay on other members’ lists, shown as “Deleted account”.</li>
   <li>Your photo, your name and your access are deleted.</li>
 </ul>
+<p>Some records have their own retention, regardless of your account: technical records from receipt scans are deleted after 90 days; usage counts, after 2 days; and access logs from our infrastructure (such as IP address and request time), kept by Supabase, after up to 7 days.</p>
+<p>For in-app purchases, when you delete your account:</p>
+<ul>
+  <li>We delete your Premium record and the purchase event history linked to your account.</li>
+  <li>We ask RevenueCat to delete your subscriber data.</li>
+  <li>List passes you bought stay valid for the list, with no link to you.</li>
+  <li>Payment records kept by Apple or Google follow those companies’ policies.</li>
+</ul>
+<div class="callout"><p><strong>Important:</strong> deleting your account does not cancel your subscription in the store. Cancel it in the App Store or Google Play subscription settings.</p></div>
 <p>See how to delete it on the <a href="../delete-account/">Delete account</a> page.</p>
+
+<h2>Legal bases</h2>
+<p>We process your data on these LGPD legal bases:</p>
+<ul>
+  <li><strong>Performance of a contract (Art. 7, V):</strong> to provide what you use in the app: account, lists, members, invites, contacts, who is viewing a list, bill splitting and Pix key, barcode scanning, receipt import and in-app purchases.</li>
+  <li><strong>Legitimate interest (Art. 7, IX):</strong> to keep the service secure and working: usage limits against abuse, technical records to fix failures, ML Kit technical metrics and app usage analytics. In these cases, you can object to the processing by writing to the email below.</li>
+  <li><strong>Compliance with a legal obligation (Art. 7, II):</strong> when the law requires us to keep certain data.</li>
+</ul>
 
 <h2>Your rights</h2>
 <p>Under Brazil’s General Data Protection Law (LGPD, Article 18), you can ask for:</p>
@@ -193,15 +320,16 @@
   <li>correction of incomplete, inaccurate or outdated data;</li>
   <li>deletion of your data;</li>
   <li>information about who your data is shared with;</li>
-  <li>withdrawal of your consent.</li>
+  <li>withdrawal of your consent;</li>
+  <li>objection to processing based on legitimate interest.</li>
 </ul>
-<p>Send your request to privacidade@getanotou.app.</p>
+<p>Send your request to privacidade@getanotou.app. You can also file a complaint with Brazil’s data protection authority (ANPD).</p>
 
 <h2>Age</h2>
 <p>Anotou? is not intended for anyone under 16.</p>
 
 <h2>Contact</h2>
-<p>Privacy questions: privacidade@getanotou.app.</p>
+<p>Privacy questions, including questions or requests about purchase data: privacidade@getanotou.app.</p>
     </article>
   </div>
 </main>
