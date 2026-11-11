@@ -476,3 +476,21 @@ button.lc:hover { border-color: var(--a-green-2); }
 /* Premium block (reuses the old "coming soon" layout with a solid border) */
 .soon.is-premium { border-style: solid; background: var(--surface); }
 .soon.is-premium .soon-item .icon { background: var(--primary-soft); color: var(--primary); }
+
+/* ---------- Invite fallback page (/invite/, shown at /l/<token>) ---------- */
+.invite { min-height: 62vh; display: grid; place-items: center; padding-block: 56px; }
+.invite-card { max-width: 34rem; text-align: center; }
+.invite-icon { display: block; margin: 0 auto 20px; border-radius: 18px; box-shadow: var(--shadow); }
+.invite h1 { font-size: clamp(1.7rem, 5vw, 2.4rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin: 0 0 12px; }
+.invite .lead { margin-inline: auto; }
+.invite-badges { justify-content: center; margin-top: 28px; }
+a.badge.is-live {
+  border-style: solid; border-color: var(--primary); color: var(--text); cursor: pointer; user-select: auto;
+  text-decoration: none; text-align: left;
+}
+a.badge.is-live strong { color: var(--primary); }
+a.badge.is-live:hover { background: var(--primary-soft); }
+.invite-tip {
+  margin: 24px auto 0; padding: 12px 16px; max-width: 26rem; border-radius: 14px;
+  background: var(--accent-soft); color: var(--text); font-size: 0.95rem;
+}
