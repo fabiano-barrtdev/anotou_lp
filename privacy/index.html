@@ -67,7 +67,7 @@
   <div class="wrap">
     <article class="prose" lang="pt-BR">
 <h1>Política de privacidade</h1>
-<p class="meta">App Anotou? · Última atualização: 2 de novembro de 2026</p>
+<p class="meta">App Anotou? · Última atualização: 16 de novembro de 2026</p>
 <p>Esta política explica, em linguagem simples, quais dados o app Anotou? usa, para quê e com quem eles são compartilhados.</p>
 
 <h2>Quem cuida dos seus dados</h2>
@@ -100,7 +100,7 @@
 </ul>
 
 <h2>Leitura de código de barras</h2>
-<p>O código lido é consultado no Open Food Facts por meio do nosso servidor. Os dados do produto ficam guardados para consultas futuras.</p>
+<p>Quando você lê o código de barras (EAN) de um produto, nosso servidor consulta esse código no Open Food Facts, uma base aberta de produtos. O Open Food Facts recebe só o código, a partir do nosso servidor: não recebe seu nome, sua conta nem o endereço IP do seu aparelho. Os dados do produto (como nome, marca e conteúdo) vêm do Open Food Facts, sob a licença ODbL, com a atribuição exibida no app, e ficam guardados para consultas futuras.</p>
 
 <h2>Importar nota fiscal (NFC-e)</h2>
 <p>Em listas em reais, você pode importar a nota fiscal de uma compra (NFC-e) lendo o QR code do cupom. É um recurso pago (veja os <a href="../terms/">Termos de uso</a>) e funciona com as notas dos estados suportados pelo app.</p>
@@ -108,8 +108,8 @@
 <ol>
   <li><strong>Leitura no aparelho.</strong> A câmera lê o QR code no próprio aparelho. No Android, essa leitura usa o Google ML Kit (veja “Com quem compartilhamos”).</li>
   <li><strong>Consulta à Secretaria da Fazenda.</strong> Seu aparelho abre a página pública da Secretaria da Fazenda (SEFAZ) indicada no QR code. Essa consulta vai direto do seu aparelho ao site do governo, que recebe dados técnicos da conexão, como seu endereço IP.</li>
-  <li><strong>Limpeza antes de enviar.</strong> Antes de mandar qualquer coisa ao nosso servidor, o app remove da página o CPF e o nome do consumidor, campos ocultos e o texto livre do cupom (que pode trazer o nome do operador de caixa e o final do cartão), e mascara qualquer CPF que tenha sobrado. O conteúdo limpo vai por conexão criptografada ao nosso servidor, que extrai os itens e devolve. Esse conteúdo não é gravado; o servidor registra apenas o resultado da leitura, o estado e tamanhos.</li>
-  <li><strong>Você confere.</strong> Nada é gravado antes de você revisar e confirmar a importação.</li>
+  <li><strong>Limpeza antes de enviar.</strong> Antes de mandar qualquer coisa ao nosso servidor, o app remove da página o CPF e o nome do consumidor, campos ocultos e o texto livre do cupom (que pode trazer o nome do operador de caixa e o final do cartão), e mascara qualquer CPF que tenha sobrado. O conteúdo limpo vai por conexão criptografada ao nosso servidor, que extrai os itens e devolve. Esse conteúdo não é gravado; o servidor registra apenas o resultado da leitura, o estado e tamanhos, além dos preços anônimos descritos em “Preços anônimos das notas fiscais”.</li>
+  <li><strong>Você confere.</strong> Nada entra na sua lista antes de você revisar e confirmar a importação.</li>
 </ol>
 <h3>O que guardamos</h3>
 <ul>
@@ -123,6 +123,14 @@
 <p><strong>Dados técnicos:</strong> para corrigir falhas, registramos sobre cada leitura, sem identificar você: estado, formato da página, resultado, motivo de falha, uma impressão digital da estrutura da página (sem nenhum texto da nota), tamanho, quantidade de itens e duração. Esses registros são apagados após 90 dias. Para evitar abuso, também contamos quantas leituras de nota e consultas de código de barras cada pessoa faz por minuto, hora e dia, sem guardar o que foi lido. Essas contagens são apagadas após 2 dias.</p>
 <p><strong>Por quanto tempo:</strong> os dados da nota ficam enquanto a lista existir. Eles são apagados quando você remove a importação, apaga a lista ou exclui sua conta. O cadastro de lojas permanece.</p>
 
+<h2>Preços anônimos das notas fiscais</h2>
+<p>Quando uma nota fiscal é lida no app, guardamos de forma anônima os preços dos produtos que têm código de barras (EAN), para que, no futuro, o app possa mostrar a outras pessoas quanto esses produtos custaram perto delas. Esses preços ainda não são exibidos no app.</p>
+<p><strong>O que guardamos, a partir dos dados da SEFAZ, para cada linha com código de barras:</strong> o código de barras, o preço unitário, a unidade, o dia da compra (sem a hora), a loja (nome e endereço públicos de quem emitiu a nota) e a cidade e o estado.</p>
+<p><strong>O que não guardamos nesses registros:</strong> seu nome, sua conta, a lista, o CPF, a forma de pagamento, a chave de acesso e a nota. Para evitar contar a mesma linha duas vezes, guardamos apenas um código derivado da chave de acesso de forma irreversível, que não permite recuperá-la.</p>
+<p><strong>Por que ficam depois que você apaga:</strong> como nada nesses registros liga o preço a você, depois de gravados não conseguimos saber quais vieram das suas notas. Por isso eles continuam guardados quando você remove a importação, apaga a lista ou exclui a conta, e não podem ser localizados nem apagados por pedido individual.</p>
+<p><strong>Como serão mostrados:</strong> somente como preços de produtos em lojas, sem indicar quem comprou e sem rankings de pessoas.</p>
+<p>Hoje o app não oferece a opção de não contribuir com esses preços. Lembre que, numa loja pequena, a combinação de loja, dia e produto pode, em casos raros, ajudar quem já conhece seus hábitos a supor uma compra sua.</p>
+
 <h2>Compras no app</h2>
 <p>Quando você faz uma compra no app (assinatura do Premium ou passe de uma lista), tratamos: o identificador interno da sua conta no Anotou?, o produto comprado, a data, o estado e a validade da assinatura ou do passe, a loja de origem e identificadores da transação.</p>
 <p>Não recebemos nem armazenamos dados de cartão ou de outros meios de pagamento: o pagamento é processado inteiramente pela Apple ou pelo Google.</p>
@@ -135,7 +143,7 @@
   <li><strong>Google e Apple:</strong> login e, como lojas de aplicativos, processamento dos pagamentos das compras no app.</li>
   <li><strong>Google (ML Kit), só no Android:</strong> a leitura de códigos de barras e QR codes usa o ML Kit, que roda no aparelho. As imagens da câmera não são enviadas ao Google, mas o ML Kit envia ao Google métricas técnicas de uso e desempenho (por exemplo, modelo do aparelho, versão do app, tempos, erros e um identificador da instalação), que o Google usa para manter e melhorar o ML Kit, segundo as regras dele. No iOS, a leitura usa o recurso do próprio sistema da Apple.</li>
   <li><strong>RevenueCat, Inc.:</strong> gerencia o estado das assinaturas e das compras no app. Com o RevenueCat compartilhamos apenas o identificador interno da sua conta (não seu nome nem seu e-mail) e os dados da transação informados pela loja.</li>
-  <li><strong>Open Food Facts:</strong> dados de produtos.</li>
+  <li><strong>Open Food Facts:</strong> dados de produtos. Recebe apenas o código de barras consultado, a partir do nosso servidor.</li>
   <li><strong>Google Workspace:</strong> e-mail de suporte.</li>
   <li><strong>PostHog:</strong> análise de uso e relatório de erros, sem gravação de tela.</li>
 </ul>
@@ -160,12 +168,13 @@
   <li>As listas que só você usa são apagadas.</li>
   <li>Os itens que você comprou continuam nas listas dos outros membros, identificados como “Conta excluída”.</li>
   <li>Sua foto, seu nome e seu acesso são apagados.</li>
+  <li>Os preços anônimos das notas fiscais continuam guardados, porque não têm ligação com você (veja “Preços anônimos das notas fiscais”).</li>
 </ul>
 <p>Alguns registros têm prazo próprio, independentemente da conta: os registros técnicos da leitura de notas são apagados após 90 dias; as contagens de uso, após 2 dias; e os registros de acesso da nossa infraestrutura (como endereço IP e horário das requisições), mantidos pelo Supabase, após até 7 dias.</p>
 <p>Sobre as compras no app, quando você exclui a conta:</p>
 <ul>
   <li>Apagamos o registro do seu Premium e o histórico de eventos de compra vinculado à sua conta.</li>
-  <li>Pedimos ao RevenueCat que exclua seus dados de assinante.</li>
+  <li>Excluímos seu cadastro de assinante no RevenueCat.</li>
   <li>Os passes de lista que você comprou continuam valendo para a lista, sem nenhum vínculo com você.</li>
   <li>Os registros de pagamento mantidos pela Apple ou pelo Google seguem as políticas dessas empresas.</li>
 </ul>
@@ -177,6 +186,7 @@
 <ul>
   <li><strong>Execução de contrato (art. 7º, V):</strong> para oferecer o que você usa no app: conta, listas, membros, convites, contatos, quem está vendo a lista, racha da conta e chave Pix, leitura de código de barras, importação de nota fiscal e compras no app.</li>
   <li><strong>Legítimo interesse (art. 7º, IX):</strong> para manter o serviço seguro e funcionando: limites de uso contra abuso, registros técnicos para corrigir falhas, métricas técnicas do ML Kit e análise de uso do app. Nesses casos, você pode se opor ao tratamento pelo e-mail abaixo.</li>
+  <li><strong>Preços anônimos das notas fiscais:</strong> a etapa de extrair e anonimizar os preços no momento da leitura é feita com base no legítimo interesse (art. 7º, IX), para oferecer a comparação de preços a todos os usuários. Depois de anonimizados, esses registros não são dados pessoais (LGPD, art. 12), salvo se a anonimização puder ser revertida com esforços razoáveis, o que procuramos evitar não guardando nada que identifique você, a lista ou a nota.</li>
   <li><strong>Cumprimento de obrigação legal (art. 7º, II):</strong> quando a lei nos obrigar a guardar algum dado.</li>
 </ul>
 
@@ -190,6 +200,7 @@
   <li>revogação do consentimento;</li>
   <li>oposição a tratamentos feitos com base no legítimo interesse.</li>
 </ul>
+<p>Os preços anônimos das notas fiscais não podem ser incluídos em pedidos de acesso, correção ou exclusão, porque não conseguimos ligá-los a você.</p>
 <p>Faça seu pedido pelo e-mail privacidade@getanotou.app. Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
 
 <h2>Idade</h2>
@@ -200,7 +211,7 @@
     </article>
     <article class="prose" lang="en">
 <h1>Privacy policy</h1>
-<p class="meta">Anotou? app · Last updated: November 2, 2026</p>
+<p class="meta">Anotou? app · Last updated: November 16, 2026</p>
 <p>This policy explains, in plain language, what data the Anotou? app uses, what for, and who it is shared with.</p>
 
 <h2>Who looks after your data</h2>
@@ -233,7 +244,7 @@
 </ul>
 
 <h2>Barcode scanning</h2>
-<p>The scanned code is looked up on Open Food Facts through our server. The product data is stored for future lookups.</p>
+<p>When you scan a product’s barcode (EAN), our server looks the code up on Open Food Facts, an open product database. Open Food Facts receives only the code, from our server: not your name, your account or your device’s IP address. Product data (such as name, brand and size) comes from Open Food Facts under the ODbL license, with attribution shown in the app, and is stored for future lookups.</p>
 
 <h2>Import a receipt (NFC-e)</h2>
 <p>In lists in Brazilian reais, you can import a purchase receipt (NFC-e) by scanning the receipt’s QR code. It is a paid feature (see the <a href="../terms/">Terms of use</a>) and works with receipts from the states the app supports.</p>
@@ -241,8 +252,8 @@
 <ol>
   <li><strong>Reading on the device.</strong> The camera reads the QR code on the device itself. On Android, this uses Google ML Kit (see “Who we share data with”).</li>
   <li><strong>Request to the state tax office.</strong> Your device opens the public page of the state tax office (SEFAZ) indicated in the QR code. This request goes straight from your device to the government website, which receives technical connection data such as your IP address.</li>
-  <li><strong>Cleanup before sending.</strong> Before sending anything to our server, the app removes the consumer’s CPF and name, hidden fields and the receipt’s free text (which may include the cashier’s name and the last digits of the card), and masks any remaining CPF. The cleaned content goes over an encrypted connection to our server, which extracts the items and sends them back. This content is not stored; the server only records the result of the scan, the state and sizes.</li>
-  <li><strong>You review it.</strong> Nothing is saved until you review and confirm the import.</li>
+  <li><strong>Cleanup before sending.</strong> Before sending anything to our server, the app removes the consumer’s CPF and name, hidden fields and the receipt’s free text (which may include the cashier’s name and the last digits of the card), and masks any remaining CPF. The cleaned content goes over an encrypted connection to our server, which extracts the items and sends them back. This content is not stored; the server only records the result of the scan, the state and sizes, plus the anonymous prices described in “Anonymous prices from receipts”.</li>
+  <li><strong>You review it.</strong> Nothing is added to your list until you review and confirm the import.</li>
 </ol>
 <h3>What we store</h3>
 <ul>
@@ -256,6 +267,14 @@
 <p><strong>Technical data:</strong> to fix failures, we record for each scan, without identifying you: state, page format, result, failure reason, a fingerprint of the page’s structure (with no receipt text), size, number of items and duration. These records are deleted after 90 days. To prevent abuse, we also count how many receipt scans and barcode lookups each person makes per minute, hour and day, without storing what was scanned. These counts are deleted after 2 days.</p>
 <p><strong>How long:</strong> receipt data is kept while the list exists. It is deleted when you remove the import, delete the list or delete your account. The store directory remains.</p>
 
+<h2>Anonymous prices from receipts</h2>
+<p>When a receipt is scanned in the app, we anonymously store the prices of products that have a barcode (EAN), so that in the future the app can show other people what those products cost near them. These prices are not shown in the app yet.</p>
+<p><strong>What we store, from the SEFAZ data, for each line with a barcode:</strong> the barcode, the unit price, the unit, the day of purchase (without the time), the store (the public name and address of the business that issued the receipt) and the city and state.</p>
+<p><strong>What these records don’t include:</strong> your name, your account, the list, the CPF, the payment method, the access key or the receipt. To avoid counting the same line twice, we only store a code derived irreversibly from the access key, which cannot be turned back into it.</p>
+<p><strong>Why they stay after you delete things:</strong> since nothing in these records links the price to you, once stored we can’t tell which ones came from your receipts. That is why they remain when you remove an import, delete a list or delete your account, and they can’t be located or deleted on an individual request.</p>
+<p><strong>How they will be shown:</strong> only as product prices at stores, without saying who bought them and with no rankings of people.</p>
+<p>The app doesn’t currently offer an option to opt out of contributing these prices. Keep in mind that, at a small store, the combination of store, day and product could, in rare cases, help someone who already knows your habits guess at a purchase of yours.</p>
+
 <h2>In-app purchases</h2>
 <p>When you make a purchase in the app (a Premium subscription or a list’s pass), we process: your internal Anotou? account identifier, the product purchased, the date, the status and expiry of the subscription or pass, the store it came from, and transaction identifiers.</p>
 <p>We do not receive or store card details or any other payment method data: payment is handled entirely by Apple or Google.</p>
@@ -268,7 +287,7 @@
   <li><strong>Google and Apple:</strong> sign-in and, as app stores, payment processing for in-app purchases.</li>
   <li><strong>Google (ML Kit), Android only:</strong> barcode and QR code reading uses ML Kit, which runs on the device. Camera images are not sent to Google, but ML Kit sends Google technical usage and performance metrics (such as device model, app version, timings, errors and an installation identifier), which Google uses to maintain and improve ML Kit under its own rules. On iOS, reading uses Apple’s built-in system feature.</li>
   <li><strong>RevenueCat, Inc.:</strong> manages the status of subscriptions and in-app purchases. With RevenueCat we share only your internal account identifier (not your name or email) and the transaction data reported by the store.</li>
-  <li><strong>Open Food Facts:</strong> product data.</li>
+  <li><strong>Open Food Facts:</strong> product data. It receives only the barcode looked up, from our server.</li>
   <li><strong>Google Workspace:</strong> support email.</li>
   <li><strong>PostHog:</strong> usage analytics and error reporting, without screen recording.</li>
 </ul>
@@ -293,12 +312,13 @@
   <li>Lists that only you use are deleted.</li>
   <li>Items you bought stay on other members’ lists, shown as “Deleted account”.</li>
   <li>Your photo, your name and your access are deleted.</li>
+  <li>Anonymous prices from receipts remain, because they have no link to you (see “Anonymous prices from receipts”).</li>
 </ul>
 <p>Some records have their own retention, regardless of your account: technical records from receipt scans are deleted after 90 days; usage counts, after 2 days; and access logs from our infrastructure (such as IP address and request time), kept by Supabase, after up to 7 days.</p>
 <p>For in-app purchases, when you delete your account:</p>
 <ul>
   <li>We delete your Premium record and the purchase event history linked to your account.</li>
-  <li>We ask RevenueCat to delete your subscriber data.</li>
+  <li>We delete your subscriber record at RevenueCat.</li>
   <li>List passes you bought stay valid for the list, with no link to you.</li>
   <li>Payment records kept by Apple or Google follow those companies’ policies.</li>
 </ul>
@@ -310,6 +330,7 @@
 <ul>
   <li><strong>Performance of a contract (Art. 7, V):</strong> to provide what you use in the app: account, lists, members, invites, contacts, who is viewing a list, bill splitting and Pix key, barcode scanning, receipt import and in-app purchases.</li>
   <li><strong>Legitimate interest (Art. 7, IX):</strong> to keep the service secure and working: usage limits against abuse, technical records to fix failures, ML Kit technical metrics and app usage analytics. In these cases, you can object to the processing by writing to the email below.</li>
+  <li><strong>Anonymous prices from receipts:</strong> extracting and anonymizing prices at scan time is done on the basis of legitimate interest (Art. 7, IX), to offer price comparison to all users. Once anonymized, these records are not personal data (LGPD, Art. 12), unless the anonymization can be reversed with reasonable efforts, which we try to prevent by not storing anything that identifies you, the list or the receipt.</li>
   <li><strong>Compliance with a legal obligation (Art. 7, II):</strong> when the law requires us to keep certain data.</li>
 </ul>
 
@@ -323,6 +344,7 @@
   <li>withdrawal of your consent;</li>
   <li>objection to processing based on legitimate interest.</li>
 </ul>
+<p>Anonymous prices from receipts can’t be included in access, correction or deletion requests, because we can’t link them to you.</p>
 <p>Send your request to privacidade@getanotou.app. You can also file a complaint with Brazil’s data protection authority (ANPD).</p>
 
 <h2>Age</h2>
