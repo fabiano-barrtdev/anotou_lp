@@ -67,7 +67,7 @@
   <div class="wrap">
     <article class="prose" lang="pt-BR">
 <h1>Política de privacidade</h1>
-<p class="meta">App Anotou? · Última atualização: 16 de novembro de 2026</p>
+<p class="meta">App Anotou? · Última atualização: 21 de novembro de 2026</p>
 <p>Esta política explica, em linguagem simples, quais dados o app Anotou? usa, para quê e com quem eles são compartilhados.</p>
 
 <h2>Quem cuida dos seus dados</h2>
@@ -136,16 +136,37 @@
 <p>Não recebemos nem armazenamos dados de cartão ou de outros meios de pagamento: o pagamento é processado inteiramente pela Apple ou pelo Google.</p>
 <p>Usamos esses dados para liberar os recursos comprados, permitir restaurar compras, prevenir fraude e atender solicitações de suporte. A base legal é a execução de contrato (LGPD, art. 7º, V).</p>
 
+<h2>Análise de uso e erros</h2>
+<p>Para entender como o app é usado, melhorar o Anotou? e corrigir erros, usamos o PostHog. Os dados vão para lá pelo app e, em alguns casos, pelo nosso servidor, sempre ligados apenas ao identificador interno da sua conta (um código, sem seu nome nem seu e-mail).</p>
+<p><strong>O que é enviado:</strong></p>
+<ul>
+  <li>eventos de uso do app (por exemplo, criar uma lista, entrar numa lista ou marcar um item como comprado) e o nome das telas visitadas;</li>
+  <li>o idioma do app, o país do seu perfil e o provedor que você usa para entrar (Google ou Apple);</li>
+  <li>o modelo e o sistema do aparelho e a versão do app;</li>
+  <li>erros técnicos, sem dados pessoais;</li>
+  <li>a localização aproximada (cidade e estado), estimada a partir do endereço IP no momento do envio. O PostHog não guarda o endereço IP;</li>
+  <li>gravações de sessão (veja abaixo).</li>
+</ul>
+<p><strong>Gravação de sessão:</strong> registra a estrutura das telas e os toques, para entendermos onde o app confunde ou falha. Todo texto, imagem e campo de digitação fica mascarado na gravação, então nenhum conteúdo das suas listas aparece.</p>
+<p><strong>O que nunca é enviado ao PostHog:</strong> seu nome, seu e-mail, sua foto, nomes de listas, de itens ou de pessoas, sua chave Pix e valores digitados.</p>
+<p><strong>Como desligar:</strong> em Perfil → Preferências, desative “Compartilhar dados de uso”. O efeito é imediato: o app para de enviar eventos, erros e gravações. Você também pode pedir pelo e-mail privacidade@getanotou.app.</p>
+
+<h2>Notificações</h2>
+<p>Usamos o OneSignal para enviar notificações push sobre as suas listas. As notificações só são enviadas se você permitir nas configurações do sistema, e você pode desligá-las a qualquer momento nas configurações do aparelho.</p>
+<p>Para isso, o OneSignal recebe: o token de notificação do aparelho, um identificador de inscrição, o identificador interno da sua conta (sem nome nem e-mail), o idioma, o fuso horário, o modelo e o sistema do aparelho, se as notificações estão permitidas e se você abriu as notificações recebidas. O aparelho é registrado no OneSignal mesmo antes de você permitir as notificações, para que elas possam começar a chegar se você permitir depois.</p>
+<p>O OneSignal não recebe seu nome, seu e-mail, sua foto, nem nomes de listas, de itens ou de pessoas.</p>
+
 <h2>Com quem compartilhamos</h2>
 <p>Usamos estes fornecedores para o app funcionar:</p>
 <ul>
-  <li><strong>Supabase:</strong> banco de dados, login e armazenamento de arquivos.</li>
+  <li><strong>Supabase:</strong> banco de dados, login e armazenamento de arquivos, rodando em servidor próprio.</li>
   <li><strong>Google e Apple:</strong> login e, como lojas de aplicativos, processamento dos pagamentos das compras no app.</li>
   <li><strong>Google (ML Kit), só no Android:</strong> a leitura de códigos de barras e QR codes usa o ML Kit, que roda no aparelho. As imagens da câmera não são enviadas ao Google, mas o ML Kit envia ao Google métricas técnicas de uso e desempenho (por exemplo, modelo do aparelho, versão do app, tempos, erros e um identificador da instalação), que o Google usa para manter e melhorar o ML Kit, segundo as regras dele. No iOS, a leitura usa o recurso do próprio sistema da Apple.</li>
   <li><strong>RevenueCat, Inc.:</strong> gerencia o estado das assinaturas e das compras no app. Com o RevenueCat compartilhamos apenas o identificador interno da sua conta (não seu nome nem seu e-mail) e os dados da transação informados pela loja.</li>
   <li><strong>Open Food Facts:</strong> dados de produtos. Recebe apenas o código de barras consultado, a partir do nosso servidor.</li>
   <li><strong>Google Workspace:</strong> e-mail de suporte.</li>
-  <li><strong>PostHog:</strong> análise de uso e relatório de erros, sem gravação de tela.</li>
+  <li><strong>PostHog:</strong> análise de uso, registro de erros e gravação de sessão com conteúdo mascarado (veja “Análise de uso e erros”).</li>
+  <li><strong>OneSignal:</strong> envio de notificações push (veja “Notificações”).</li>
 </ul>
 <p>Na importação de nota fiscal, a consulta à SEFAZ parte do seu próprio aparelho, a seu pedido (veja a seção “Importar nota fiscal”).</p>
 
@@ -154,12 +175,13 @@
 <ul>
   <li><strong>Supabase:</strong> nos Estados Unidos.</li>
   <li><strong>PostHog:</strong> na União Europeia.</li>
+  <li><strong>OneSignal:</strong> nos Estados Unidos.</li>
   <li><strong>RevenueCat, Apple e Google</strong> (inclusive o Google Workspace): em especial nos Estados Unidos.</li>
 </ul>
 <p>Essas transferências seguem as salvaguardas previstas na LGPD (arts. 33 e seguintes).</p>
 
-<h2>Anúncios e venda de dados</h2>
-<p>O Anotou? não tem anúncios e não vende seus dados.</p>
+<h2>Anúncios, venda de dados e rastreamento</h2>
+<p>O Anotou? não tem anúncios, não vende seus dados e não rastreia você em apps e sites de outras empresas.</p>
 
 <h2>Por quanto tempo guardamos</h2>
 <p>Guardamos seus dados enquanto sua conta existir. Quando você exclui a conta:</p>
@@ -168,6 +190,7 @@
   <li>As listas que só você usa são apagadas.</li>
   <li>Os itens que você comprou continuam nas listas dos outros membros, identificados como “Conta excluída”.</li>
   <li>Sua foto, seu nome e seu acesso são apagados.</li>
+  <li>Os dados ligados à sua conta no PostHog e no OneSignal são removidos em até 30 dias.</li>
   <li>Os preços anônimos das notas fiscais continuam guardados, porque não têm ligação com você (veja “Preços anônimos das notas fiscais”).</li>
 </ul>
 <p>Alguns registros têm prazo próprio, independentemente da conta: os registros técnicos da leitura de notas são apagados após 90 dias; as contagens de uso, após 2 dias; e os registros de acesso da nossa infraestrutura (como endereço IP e horário das requisições), mantidos pelo Supabase, após até 7 dias.</p>
@@ -184,8 +207,8 @@
 <h2>Bases legais</h2>
 <p>Tratamos seus dados com base na LGPD:</p>
 <ul>
-  <li><strong>Execução de contrato (art. 7º, V):</strong> para oferecer o que você usa no app: conta, listas, membros, convites, contatos, quem está vendo a lista, racha da conta e chave Pix, leitura de código de barras, importação de nota fiscal e compras no app.</li>
-  <li><strong>Legítimo interesse (art. 7º, IX):</strong> para manter o serviço seguro e funcionando: limites de uso contra abuso, registros técnicos para corrigir falhas, métricas técnicas do ML Kit e análise de uso do app. Nesses casos, você pode se opor ao tratamento pelo e-mail abaixo.</li>
+  <li><strong>Execução de contrato (art. 7º, V):</strong> para oferecer o que você usa no app: conta, listas, membros, convites, contatos, quem está vendo a lista, racha da conta e chave Pix, leitura de código de barras, importação de nota fiscal, compras no app e notificações sobre as suas listas (enviadas só com a permissão do sistema).</li>
+  <li><strong>Legítimo interesse (art. 7º, IX):</strong> para manter o serviço seguro e funcionando: limites de uso contra abuso, registros técnicos para corrigir falhas, métricas técnicas do ML Kit e análise de uso, registro de erros e gravação de sessão para melhorar o app. Nesses casos, você pode se opor ao tratamento: para a análise de uso, desativando “Compartilhar dados de uso” em Perfil → Preferências; para o restante, pelo e-mail abaixo.</li>
   <li><strong>Preços anônimos das notas fiscais:</strong> a etapa de extrair e anonimizar os preços no momento da leitura é feita com base no legítimo interesse (art. 7º, IX), para oferecer a comparação de preços a todos os usuários. Depois de anonimizados, esses registros não são dados pessoais (LGPD, art. 12), salvo se a anonimização puder ser revertida com esforços razoáveis, o que procuramos evitar não guardando nada que identifique você, a lista ou a nota.</li>
   <li><strong>Cumprimento de obrigação legal (art. 7º, II):</strong> quando a lei nos obrigar a guardar algum dado.</li>
 </ul>
@@ -211,7 +234,7 @@
     </article>
     <article class="prose" lang="en">
 <h1>Privacy policy</h1>
-<p class="meta">Anotou? app · Last updated: November 16, 2026</p>
+<p class="meta">Anotou? app · Last updated: November 21, 2026</p>
 <p>This policy explains, in plain language, what data the Anotou? app uses, what for, and who it is shared with.</p>
 
 <h2>Who looks after your data</h2>
@@ -280,16 +303,37 @@
 <p>We do not receive or store card details or any other payment method data: payment is handled entirely by Apple or Google.</p>
 <p>We use this data to unlock the features you bought, let you restore purchases, prevent fraud and handle support requests. The legal basis is the performance of a contract (LGPD, Article 7, V).</p>
 
+<h2>Usage analytics and errors</h2>
+<p>To understand how the app is used, improve Anotou? and fix errors, we use PostHog. Data is sent there by the app and, in some cases, by our server, always linked only to your internal account identifier (a code, without your name or email).</p>
+<p><strong>What is sent:</strong></p>
+<ul>
+  <li>app usage events (for example, creating a list, joining a list or checking off an item) and the names of the screens you visit;</li>
+  <li>the app language, your profile’s country and the provider you sign in with (Google or Apple);</li>
+  <li>the device model and operating system, and the app version;</li>
+  <li>technical errors, without personal data;</li>
+  <li>your approximate location (city and state), estimated from your IP address when data is sent. PostHog does not store the IP address;</li>
+  <li>session recordings (see below).</li>
+</ul>
+<p><strong>Session recording:</strong> records the structure of the screens and your taps, so we can see where the app is confusing or fails. All text, images and input fields are masked in the recording, so none of your list content appears.</p>
+<p><strong>What is never sent to PostHog:</strong> your name, email, photo, names of lists, items or people, your Pix key and amounts you type.</p>
+<p><strong>How to turn it off:</strong> in Profile → Preferences, turn off “Share usage data”. It takes effect immediately: the app stops sending events, errors and recordings. You can also ask by writing to privacidade@getanotou.app.</p>
+
+<h2>Notifications</h2>
+<p>We use OneSignal to send push notifications about your lists. Notifications are only sent if you allow them in your system settings, and you can turn them off at any time in your device settings.</p>
+<p>For this, OneSignal receives: the device’s notification token, a subscription identifier, your internal account identifier (without name or email), language, time zone, device model and operating system, whether notifications are allowed, and whether you opened the notifications you received. The device is registered with OneSignal even before you allow notifications, so they can start arriving if you allow them later.</p>
+<p>OneSignal does not receive your name, email, photo, or the names of lists, items or people.</p>
+
 <h2>Who we share data with</h2>
 <p>We use these providers to run the app:</p>
 <ul>
-  <li><strong>Supabase:</strong> database, sign-in and file storage.</li>
+  <li><strong>Supabase:</strong> database, sign-in and file storage, running on our own server.</li>
   <li><strong>Google and Apple:</strong> sign-in and, as app stores, payment processing for in-app purchases.</li>
   <li><strong>Google (ML Kit), Android only:</strong> barcode and QR code reading uses ML Kit, which runs on the device. Camera images are not sent to Google, but ML Kit sends Google technical usage and performance metrics (such as device model, app version, timings, errors and an installation identifier), which Google uses to maintain and improve ML Kit under its own rules. On iOS, reading uses Apple’s built-in system feature.</li>
   <li><strong>RevenueCat, Inc.:</strong> manages the status of subscriptions and in-app purchases. With RevenueCat we share only your internal account identifier (not your name or email) and the transaction data reported by the store.</li>
   <li><strong>Open Food Facts:</strong> product data. It receives only the barcode looked up, from our server.</li>
   <li><strong>Google Workspace:</strong> support email.</li>
-  <li><strong>PostHog:</strong> usage analytics and error reporting, without screen recording.</li>
+  <li><strong>PostHog:</strong> usage analytics, error logging and session recording with masked content (see “Usage analytics and errors”).</li>
+  <li><strong>OneSignal:</strong> push notifications (see “Notifications”).</li>
 </ul>
 <p>When you import a receipt, the request to SEFAZ comes from your own device, at your request (see “Import a receipt”).</p>
 
@@ -298,12 +342,13 @@
 <ul>
   <li><strong>Supabase:</strong> in the United States.</li>
   <li><strong>PostHog:</strong> in the European Union.</li>
+  <li><strong>OneSignal:</strong> in the United States.</li>
   <li><strong>RevenueCat, Apple and Google</strong> (including Google Workspace): especially in the United States.</li>
 </ul>
 <p>These transfers follow the safeguards set out in the LGPD (Articles 33 onward).</p>
 
-<h2>Ads and selling data</h2>
-<p>Anotou? has no ads and does not sell your data.</p>
+<h2>Ads, selling data and tracking</h2>
+<p>Anotou? has no ads, does not sell your data and does not track you across other companies’ apps and websites.</p>
 
 <h2>How long we keep data</h2>
 <p>We keep your data for as long as your account exists. When you delete your account:</p>
@@ -312,6 +357,7 @@
   <li>Lists that only you use are deleted.</li>
   <li>Items you bought stay on other members’ lists, shown as “Deleted account”.</li>
   <li>Your photo, your name and your access are deleted.</li>
+  <li>Data linked to your account in PostHog and OneSignal is removed within 30 days.</li>
   <li>Anonymous prices from receipts remain, because they have no link to you (see “Anonymous prices from receipts”).</li>
 </ul>
 <p>Some records have their own retention, regardless of your account: technical records from receipt scans are deleted after 90 days; usage counts, after 2 days; and access logs from our infrastructure (such as IP address and request time), kept by Supabase, after up to 7 days.</p>
@@ -328,8 +374,8 @@
 <h2>Legal bases</h2>
 <p>We process your data on these LGPD legal bases:</p>
 <ul>
-  <li><strong>Performance of a contract (Art. 7, V):</strong> to provide what you use in the app: account, lists, members, invites, contacts, who is viewing a list, bill splitting and Pix key, barcode scanning, receipt import and in-app purchases.</li>
-  <li><strong>Legitimate interest (Art. 7, IX):</strong> to keep the service secure and working: usage limits against abuse, technical records to fix failures, ML Kit technical metrics and app usage analytics. In these cases, you can object to the processing by writing to the email below.</li>
+  <li><strong>Performance of a contract (Art. 7, V):</strong> to provide what you use in the app: account, lists, members, invites, contacts, who is viewing a list, bill splitting and Pix key, barcode scanning, receipt import, in-app purchases and notifications about your lists (sent only with system permission).</li>
+  <li><strong>Legitimate interest (Art. 7, IX):</strong> to keep the service secure and working: usage limits against abuse, technical records to fix failures, ML Kit technical metrics, and usage analytics, error logging and session recording to improve the app. In these cases, you can object to the processing: for usage analytics, by turning off “Share usage data” in Profile → Preferences; for the rest, by writing to the email below.</li>
   <li><strong>Anonymous prices from receipts:</strong> extracting and anonymizing prices at scan time is done on the basis of legitimate interest (Art. 7, IX), to offer price comparison to all users. Once anonymized, these records are not personal data (LGPD, Art. 12), unless the anonymization can be reversed with reasonable efforts, which we try to prevent by not storing anything that identifies you, the list or the receipt.</li>
   <li><strong>Compliance with a legal obligation (Art. 7, II):</strong> when the law requires us to keep certain data.</li>
 </ul>
