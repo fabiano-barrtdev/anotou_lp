@@ -67,7 +67,7 @@
   <div class="wrap">
     <article class="prose" lang="pt-BR">
 <h1>Política de privacidade</h1>
-<p class="meta">App Anotou? · Última atualização: 21 de novembro de 2026</p>
+<p class="meta">App Anotou? · Última atualização: 22 de novembro de 2026</p>
 <p>Esta política explica, em linguagem simples, quais dados o app Anotou? usa, para quê e com quem eles são compartilhados.</p>
 
 <h2>Quem cuida dos seus dados</h2>
@@ -152,9 +152,10 @@
 <p><strong>Como desligar:</strong> em Perfil → Preferências, desative “Compartilhar dados de uso”. O efeito é imediato: o app para de enviar eventos, erros e gravações. Você também pode pedir pelo e-mail privacidade@getanotou.app.</p>
 
 <h2>Notificações</h2>
-<p>Usamos o OneSignal para enviar notificações push sobre as suas listas. As notificações só são enviadas se você permitir nas configurações do sistema, e você pode desligá-las a qualquer momento nas configurações do aparelho.</p>
+<p>Usamos o OneSignal para enviar notificações push sobre as suas listas. As notificações só são enviadas se você permitir nas configurações do sistema, e você pode desligá-las a qualquer momento nas configurações do aparelho. No Android, também dá para desligar cada tipo separadamente: convites, itens para você e atividade das listas. A opção “Compartilhar dados de uso” não desliga as notificações.</p>
 <p>Para isso, o OneSignal recebe: o token de notificação do aparelho, um identificador de inscrição, o identificador interno da sua conta (sem nome nem e-mail), o idioma, o fuso horário, o modelo e o sistema do aparelho, se as notificações estão permitidas e se você abriu as notificações recebidas. O aparelho é registrado no OneSignal mesmo antes de você permitir as notificações, para que elas possam começar a chegar se você permitir depois.</p>
-<p>O OneSignal não recebe seu nome, seu e-mail, sua foto, nem nomes de listas, de itens ou de pessoas.</p>
+<p><strong>Conteúdo das notificações:</strong> para avisar os membros de uma lista sobre o que aconteceu nela, a notificação inclui o nome de quem fez a ação, o nome da lista e do item e o link da foto de perfil de quem fez a ação. A foto é baixada pelo aparelho de quem recebe direto do nosso servidor; o OneSignal recebe só o link. Esse conteúdo passa pelo OneSignal, que entrega a notificação e mantém um histórico das mensagens enviadas. As notificações vão apenas para os membros da lista ou para a pessoa convidada.</p>
+<p>O OneSignal nunca recebe seu e-mail, sua chave Pix, valores ou links de convite.</p>
 
 <h2>Com quem compartilhamos</h2>
 <p>Usamos estes fornecedores para o app funcionar:</p>
@@ -190,7 +191,7 @@
   <li>As listas que só você usa são apagadas.</li>
   <li>Os itens que você comprou continuam nas listas dos outros membros, identificados como “Conta excluída”.</li>
   <li>Sua foto, seu nome e seu acesso são apagados.</li>
-  <li>Os dados ligados à sua conta no PostHog e no OneSignal são removidos em até 30 dias.</li>
+  <li>Os dados ligados à sua conta no PostHog e no OneSignal são removidos em até 30 dias, e as notificações ainda não enviadas por sua causa são descartadas.</li>
   <li>Os preços anônimos das notas fiscais continuam guardados, porque não têm ligação com você (veja “Preços anônimos das notas fiscais”).</li>
 </ul>
 <p>Alguns registros têm prazo próprio, independentemente da conta: os registros técnicos da leitura de notas são apagados após 90 dias; as contagens de uso, após 2 dias; e os registros de acesso da nossa infraestrutura (como endereço IP e horário das requisições), mantidos pelo Supabase, após até 7 dias.</p>
@@ -234,7 +235,7 @@
     </article>
     <article class="prose" lang="en">
 <h1>Privacy policy</h1>
-<p class="meta">Anotou? app · Last updated: November 21, 2026</p>
+<p class="meta">Anotou? app · Last updated: November 22, 2026</p>
 <p>This policy explains, in plain language, what data the Anotou? app uses, what for, and who it is shared with.</p>
 
 <h2>Who looks after your data</h2>
@@ -319,9 +320,10 @@
 <p><strong>How to turn it off:</strong> in Profile → Preferences, turn off “Share usage data”. It takes effect immediately: the app stops sending events, errors and recordings. You can also ask by writing to privacidade@getanotou.app.</p>
 
 <h2>Notifications</h2>
-<p>We use OneSignal to send push notifications about your lists. Notifications are only sent if you allow them in your system settings, and you can turn them off at any time in your device settings.</p>
+<p>We use OneSignal to send push notifications about your lists. Notifications are only sent if you allow them in your system settings, and you can turn them off at any time in your device settings. On Android, you can also turn off each type separately: invites, items for you and list activity. The “Share usage data” option does not turn off notifications.</p>
 <p>For this, OneSignal receives: the device’s notification token, a subscription identifier, your internal account identifier (without name or email), language, time zone, device model and operating system, whether notifications are allowed, and whether you opened the notifications you received. The device is registered with OneSignal even before you allow notifications, so they can start arriving if you allow them later.</p>
-<p>OneSignal does not receive your name, email, photo, or the names of lists, items or people.</p>
+<p><strong>Notification content:</strong> to let a list’s members know what happened on it, a notification includes the name of the person who did something, the names of the list and the item, and a link to that person’s profile photo. The photo is downloaded by the recipient’s device straight from our server; OneSignal only receives the link. This content passes through OneSignal, which delivers the notification and keeps a history of messages sent. Notifications go only to the list’s members or to the person invited.</p>
+<p>OneSignal never receives your email, Pix key, amounts or invite links.</p>
 
 <h2>Who we share data with</h2>
 <p>We use these providers to run the app:</p>
@@ -357,7 +359,7 @@
   <li>Lists that only you use are deleted.</li>
   <li>Items you bought stay on other members’ lists, shown as “Deleted account”.</li>
   <li>Your photo, your name and your access are deleted.</li>
-  <li>Data linked to your account in PostHog and OneSignal is removed within 30 days.</li>
+  <li>Data linked to your account in PostHog and OneSignal is removed within 30 days, and notifications about your actions that haven’t been sent yet are discarded.</li>
   <li>Anonymous prices from receipts remain, because they have no link to you (see “Anonymous prices from receipts”).</li>
 </ul>
 <p>Some records have their own retention, regardless of your account: technical records from receipt scans are deleted after 90 days; usage counts, after 2 days; and access logs from our infrastructure (such as IP address and request time), kept by Supabase, after up to 7 days.</p>
