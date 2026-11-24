@@ -67,7 +67,7 @@
   <div class="wrap">
     <article class="prose" lang="pt-BR">
 <h1>Política de privacidade</h1>
-<p class="meta">App Anotou? · Última atualização: 22 de novembro de 2026</p>
+<p class="meta">App Anotou? · Última atualização: 24 de novembro de 2026</p>
 <p>Esta política explica, em linguagem simples, quais dados o app Anotou? usa, para quê e com quem eles são compartilhados.</p>
 
 <h2>Quem cuida dos seus dados</h2>
@@ -108,7 +108,7 @@
 <ol>
   <li><strong>Leitura no aparelho.</strong> A câmera lê o QR code no próprio aparelho. No Android, essa leitura usa o Google ML Kit (veja “Com quem compartilhamos”).</li>
   <li><strong>Consulta à Secretaria da Fazenda.</strong> Seu aparelho abre a página pública da Secretaria da Fazenda (SEFAZ) indicada no QR code. Essa consulta vai direto do seu aparelho ao site do governo, que recebe dados técnicos da conexão, como seu endereço IP.</li>
-  <li><strong>Limpeza antes de enviar.</strong> Antes de mandar qualquer coisa ao nosso servidor, o app remove da página o CPF e o nome do consumidor, campos ocultos e o texto livre do cupom (que pode trazer o nome do operador de caixa e o final do cartão), e mascara qualquer CPF que tenha sobrado. O conteúdo limpo vai por conexão criptografada ao nosso servidor, que extrai os itens e devolve. Esse conteúdo não é gravado; o servidor registra apenas o resultado da leitura, o estado e tamanhos, além dos preços anônimos descritos em “Preços anônimos das notas fiscais”.</li>
+  <li><strong>Limpeza antes de enviar.</strong> Antes de mandar qualquer coisa ao nosso servidor, o app remove da página o CPF e o nome do consumidor, campos ocultos e o texto livre do cupom (que pode trazer o nome do operador de caixa e o final do cartão), e mascara qualquer CPF que tenha sobrado. O conteúdo limpo vai por conexão criptografada ao nosso servidor, que extrai os itens e devolve. Esse conteúdo não é gravado; o servidor registra apenas o resultado da leitura, o estado e tamanhos, além dos preços anônimos descritos em “Preços das notas fiscais”.</li>
   <li><strong>Você confere.</strong> Nada entra na sua lista antes de você revisar e confirmar a importação.</li>
 </ol>
 <h3>O que guardamos</h3>
@@ -123,13 +123,16 @@
 <p><strong>Dados técnicos:</strong> para corrigir falhas, registramos sobre cada leitura, sem identificar você: estado, formato da página, resultado, motivo de falha, uma impressão digital da estrutura da página (sem nenhum texto da nota), tamanho, quantidade de itens e duração. Esses registros são apagados após 90 dias. Para evitar abuso, também contamos quantas leituras de nota e consultas de código de barras cada pessoa faz por minuto, hora e dia, sem guardar o que foi lido. Essas contagens são apagadas após 2 dias.</p>
 <p><strong>Por quanto tempo:</strong> os dados da nota ficam enquanto a lista existir. Eles são apagados quando você remove a importação, apaga a lista ou exclui sua conta. O cadastro de lojas permanece.</p>
 
-<h2>Preços anônimos das notas fiscais</h2>
-<p>Quando uma nota fiscal é lida no app, guardamos de forma anônima os preços dos produtos que têm código de barras (EAN), para que, no futuro, o app possa mostrar a outras pessoas quanto esses produtos custaram perto delas. Esses preços ainda não são exibidos no app.</p>
-<p><strong>O que guardamos, a partir dos dados da SEFAZ, para cada linha com código de barras:</strong> o código de barras, o preço unitário, a unidade, o dia da compra (sem a hora), a loja (nome e endereço públicos de quem emitiu a nota) e a cidade e o estado.</p>
-<p><strong>O que não guardamos nesses registros:</strong> seu nome, sua conta, a lista, o CPF, a forma de pagamento, a chave de acesso e a nota. Para evitar contar a mesma linha duas vezes, guardamos apenas um código derivado da chave de acesso de forma irreversível, que não permite recuperá-la.</p>
-<p><strong>Por que ficam depois que você apaga:</strong> como nada nesses registros liga o preço a você, depois de gravados não conseguimos saber quais vieram das suas notas. Por isso eles continuam guardados quando você remove a importação, apaga a lista ou exclui a conta, e não podem ser localizados nem apagados por pedido individual.</p>
-<p><strong>Como serão mostrados:</strong> somente como preços de produtos em lojas, sem indicar quem comprou e sem rankings de pessoas.</p>
-<p>Hoje o app não oferece a opção de não contribuir com esses preços. Lembre que, numa loja pequena, a combinação de loja, dia e produto pode, em casos raros, ajudar quem já conhece seus hábitos a supor uma compra sua.</p>
+<h2>Preços das notas fiscais</h2>
+<p>Quando você importa uma nota fiscal (NFC-e), o Anotou? guarda, de forma anônima, o preço de cada produto que tenha código de barras informado pela loja: o código de barras, o preço unitário, o desconto da linha, a quantidade, a unidade, o dia da compra (sem horário), a loja (nome e endereço, informações públicas do estabelecimento) e a cidade/UF. Esses registros <strong>não</strong> guardam quem comprou, a lista, a nota, a chave de acesso nem o seu CPF.</p>
+<h3>Como usamos</h3>
+<ul>
+  <li><strong>Seu histórico:</strong> você vê quanto pagou por um produto nas compras registradas nas listas de que participa. São informações que os membros de cada lista já veem.</li>
+  <li><strong>Preço na sua cidade (assinantes):</strong> mostramos a mediana dos preços pagos na sua cidade e em cada loja. Só exibimos um valor quando há pelo menos 5 registros vindos de pelo menos 3 compras diferentes, e uma loja só aparece com pelo menos 3 compras. Valores fora da curva são descartados. Nunca mostramos uma compra individual.</li>
+  <li><strong>Sua cidade:</strong> usamos a cidade da loja da nota mais recente importada nas suas listas nos últimos 90 dias. Não usamos a localização do seu aparelho.</li>
+</ul>
+<p><strong>Sua escolha:</strong> em Perfil → Preferências → “Contribuir com preços anônimos” (ligado por padrão). Ao desligar, as notas que você importar daí em diante deixam de alimentar os preços. Os preços já registrados não podem ser localizados nem retirados, porque não têm vínculo com você, e por isso também permanecem depois que você exclui sua conta.</p>
+<p>Lembre que, numa loja pequena, a combinação de loja, dia e produto pode, em casos raros, ajudar quem já conhece seus hábitos a supor uma compra sua.</p>
 
 <h2>Compras no app</h2>
 <p>Quando você faz uma compra no app (assinatura do Premium ou passe de uma lista), tratamos: o identificador interno da sua conta no Anotou?, o produto comprado, a data, o estado e a validade da assinatura ou do passe, a loja de origem e identificadores da transação.</p>
@@ -192,7 +195,7 @@
   <li>Os itens que você comprou continuam nas listas dos outros membros, identificados como “Conta excluída”.</li>
   <li>Sua foto, seu nome e seu acesso são apagados.</li>
   <li>Os dados ligados à sua conta no PostHog e no OneSignal são removidos em até 30 dias, e as notificações ainda não enviadas por sua causa são descartadas.</li>
-  <li>Os preços anônimos das notas fiscais continuam guardados, porque não têm ligação com você (veja “Preços anônimos das notas fiscais”).</li>
+  <li>Os preços anônimos das notas fiscais continuam guardados, porque não têm ligação com você (veja “Preços das notas fiscais”).</li>
 </ul>
 <p>Alguns registros têm prazo próprio, independentemente da conta: os registros técnicos da leitura de notas são apagados após 90 dias; as contagens de uso, após 2 dias; e os registros de acesso da nossa infraestrutura (como endereço IP e horário das requisições), mantidos pelo Supabase, após até 7 dias.</p>
 <p>Sobre as compras no app, quando você exclui a conta:</p>
@@ -210,7 +213,7 @@
 <ul>
   <li><strong>Execução de contrato (art. 7º, V):</strong> para oferecer o que você usa no app: conta, listas, membros, convites, contatos, quem está vendo a lista, racha da conta e chave Pix, leitura de código de barras, importação de nota fiscal, compras no app e notificações sobre as suas listas (enviadas só com a permissão do sistema).</li>
   <li><strong>Legítimo interesse (art. 7º, IX):</strong> para manter o serviço seguro e funcionando: limites de uso contra abuso, registros técnicos para corrigir falhas, métricas técnicas do ML Kit e análise de uso, registro de erros e gravação de sessão para melhorar o app. Nesses casos, você pode se opor ao tratamento: para a análise de uso, desativando “Compartilhar dados de uso” em Perfil → Preferências; para o restante, pelo e-mail abaixo.</li>
-  <li><strong>Preços anônimos das notas fiscais:</strong> a etapa de extrair e anonimizar os preços no momento da leitura é feita com base no legítimo interesse (art. 7º, IX), para oferecer a comparação de preços a todos os usuários. Depois de anonimizados, esses registros não são dados pessoais (LGPD, art. 12), salvo se a anonimização puder ser revertida com esforços razoáveis, o que procuramos evitar não guardando nada que identifique você, a lista ou a nota.</li>
+  <li><strong>Preços das notas fiscais:</strong> a etapa de extrair e anonimizar os preços no momento da importação é feita com base no legítimo interesse (art. 7º, IX), para mostrar o histórico de preços e o preço dos produtos na sua cidade. Você pode se opor desligando “Contribuir com preços anônimos” em Perfil → Preferências. Depois de anonimizados, esses registros não são dados pessoais (LGPD, art. 12), salvo se a anonimização puder ser revertida com esforços razoáveis, o que procuramos evitar não guardando nada que identifique você, a lista ou a nota.</li>
   <li><strong>Cumprimento de obrigação legal (art. 7º, II):</strong> quando a lei nos obrigar a guardar algum dado.</li>
 </ul>
 
@@ -235,7 +238,7 @@
     </article>
     <article class="prose" lang="en">
 <h1>Privacy policy</h1>
-<p class="meta">Anotou? app · Last updated: November 22, 2026</p>
+<p class="meta">Anotou? app · Last updated: November 24, 2026</p>
 <p>This policy explains, in plain language, what data the Anotou? app uses, what for, and who it is shared with.</p>
 
 <h2>Who looks after your data</h2>
@@ -276,7 +279,7 @@
 <ol>
   <li><strong>Reading on the device.</strong> The camera reads the QR code on the device itself. On Android, this uses Google ML Kit (see “Who we share data with”).</li>
   <li><strong>Request to the state tax office.</strong> Your device opens the public page of the state tax office (SEFAZ) indicated in the QR code. This request goes straight from your device to the government website, which receives technical connection data such as your IP address.</li>
-  <li><strong>Cleanup before sending.</strong> Before sending anything to our server, the app removes the consumer’s CPF and name, hidden fields and the receipt’s free text (which may include the cashier’s name and the last digits of the card), and masks any remaining CPF. The cleaned content goes over an encrypted connection to our server, which extracts the items and sends them back. This content is not stored; the server only records the result of the scan, the state and sizes, plus the anonymous prices described in “Anonymous prices from receipts”.</li>
+  <li><strong>Cleanup before sending.</strong> Before sending anything to our server, the app removes the consumer’s CPF and name, hidden fields and the receipt’s free text (which may include the cashier’s name and the last digits of the card), and masks any remaining CPF. The cleaned content goes over an encrypted connection to our server, which extracts the items and sends them back. This content is not stored; the server only records the result of the scan, the state and sizes, plus the anonymous prices described in “Receipt prices”.</li>
   <li><strong>You review it.</strong> Nothing is added to your list until you review and confirm the import.</li>
 </ol>
 <h3>What we store</h3>
@@ -291,13 +294,16 @@
 <p><strong>Technical data:</strong> to fix failures, we record for each scan, without identifying you: state, page format, result, failure reason, a fingerprint of the page’s structure (with no receipt text), size, number of items and duration. These records are deleted after 90 days. To prevent abuse, we also count how many receipt scans and barcode lookups each person makes per minute, hour and day, without storing what was scanned. These counts are deleted after 2 days.</p>
 <p><strong>How long:</strong> receipt data is kept while the list exists. It is deleted when you remove the import, delete the list or delete your account. The store directory remains.</p>
 
-<h2>Anonymous prices from receipts</h2>
-<p>When a receipt is scanned in the app, we anonymously store the prices of products that have a barcode (EAN), so that in the future the app can show other people what those products cost near them. These prices are not shown in the app yet.</p>
-<p><strong>What we store, from the SEFAZ data, for each line with a barcode:</strong> the barcode, the unit price, the unit, the day of purchase (without the time), the store (the public name and address of the business that issued the receipt) and the city and state.</p>
-<p><strong>What these records don’t include:</strong> your name, your account, the list, the CPF, the payment method, the access key or the receipt. To avoid counting the same line twice, we only store a code derived irreversibly from the access key, which cannot be turned back into it.</p>
-<p><strong>Why they stay after you delete things:</strong> since nothing in these records links the price to you, once stored we can’t tell which ones came from your receipts. That is why they remain when you remove an import, delete a list or delete your account, and they can’t be located or deleted on an individual request.</p>
-<p><strong>How they will be shown:</strong> only as product prices at stores, without saying who bought them and with no rankings of people.</p>
-<p>The app doesn’t currently offer an option to opt out of contributing these prices. Keep in mind that, at a small store, the combination of store, day and product could, in rare cases, help someone who already knows your habits guess at a purchase of yours.</p>
+<h2>Receipt prices</h2>
+<p>When you import a receipt (NFC-e), Anotou? anonymously stores the price of each product that has a barcode provided by the store: barcode, unit price, line discount, quantity, unit, purchase day (no time), the store (name and address, which are public business information) and city/state. These records do <strong>not</strong> store who bought, the list, the receipt, its access key or your tax ID.</p>
+<h3>How we use them</h3>
+<ul>
+  <li><strong>Your history:</strong> you see what you paid for a product in purchases recorded in the lists you belong to, which is information list members can already see.</li>
+  <li><strong>Price in your city (subscribers):</strong> we show the median price paid in your city and at each store. A value is only shown when there are at least 5 records from at least 3 different purchases, and a store only appears with at least 3 purchases. Outliers are discarded. We never show an individual purchase.</li>
+  <li><strong>Your city:</strong> we use the city of the store on the most recent receipt imported into your lists in the last 90 days. We don’t use your device location.</li>
+</ul>
+<p><strong>Your choice:</strong> Profile → Preferences → “Contribute anonymous prices” (on by default). When off, receipts you import from then on no longer feed prices. Prices already recorded can’t be located or removed because they aren’t linked to you, which is also why they remain after you delete your account.</p>
+<p>Keep in mind that, at a small store, the combination of store, day and product could, in rare cases, help someone who already knows your habits guess at a purchase of yours.</p>
 
 <h2>In-app purchases</h2>
 <p>When you make a purchase in the app (a Premium subscription or a list’s pass), we process: your internal Anotou? account identifier, the product purchased, the date, the status and expiry of the subscription or pass, the store it came from, and transaction identifiers.</p>
@@ -360,7 +366,7 @@
   <li>Items you bought stay on other members’ lists, shown as “Deleted account”.</li>
   <li>Your photo, your name and your access are deleted.</li>
   <li>Data linked to your account in PostHog and OneSignal is removed within 30 days, and notifications about your actions that haven’t been sent yet are discarded.</li>
-  <li>Anonymous prices from receipts remain, because they have no link to you (see “Anonymous prices from receipts”).</li>
+  <li>Anonymous prices from receipts remain, because they have no link to you (see “Receipt prices”).</li>
 </ul>
 <p>Some records have their own retention, regardless of your account: technical records from receipt scans are deleted after 90 days; usage counts, after 2 days; and access logs from our infrastructure (such as IP address and request time), kept by Supabase, after up to 7 days.</p>
 <p>For in-app purchases, when you delete your account:</p>
@@ -378,7 +384,7 @@
 <ul>
   <li><strong>Performance of a contract (Art. 7, V):</strong> to provide what you use in the app: account, lists, members, invites, contacts, who is viewing a list, bill splitting and Pix key, barcode scanning, receipt import, in-app purchases and notifications about your lists (sent only with system permission).</li>
   <li><strong>Legitimate interest (Art. 7, IX):</strong> to keep the service secure and working: usage limits against abuse, technical records to fix failures, ML Kit technical metrics, and usage analytics, error logging and session recording to improve the app. In these cases, you can object to the processing: for usage analytics, by turning off “Share usage data” in Profile → Preferences; for the rest, by writing to the email below.</li>
-  <li><strong>Anonymous prices from receipts:</strong> extracting and anonymizing prices at scan time is done on the basis of legitimate interest (Art. 7, IX), to offer price comparison to all users. Once anonymized, these records are not personal data (LGPD, Art. 12), unless the anonymization can be reversed with reasonable efforts, which we try to prevent by not storing anything that identifies you, the list or the receipt.</li>
+  <li><strong>Receipt prices:</strong> extracting and anonymizing prices at import time is done on the basis of legitimate interest (Art. 7, IX), to show price history and product prices in your city. You can object by turning off “Contribute anonymous prices” in Profile → Preferences. Once anonymized, these records are not personal data (LGPD, Art. 12), unless the anonymization can be reversed with reasonable efforts, which we try to prevent by not storing anything that identifies you, the list or the receipt.</li>
   <li><strong>Compliance with a legal obligation (Art. 7, II):</strong> when the law requires us to keep certain data.</li>
 </ul>
 
