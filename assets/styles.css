@@ -131,15 +131,14 @@ html:not([data-lang="en"]) body [lang="en"] { display: none !important; }
 .tagline::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
 .hero h1 { font-size: clamp(2.3rem, 7vw, 4.1rem); font-weight: 800; letter-spacing: -0.04em; max-width: 14ch; }
 .lead { font-size: clamp(1.05rem, 2.2vw, 1.25rem); color: var(--muted); max-width: 34em; }
-.badges { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; margin: 32px 0 0; }
-.badge {
-  display: flex; flex-direction: column; justify-content: center;
-  min-width: 172px; padding: 10px 18px; line-height: 1.25;
-  border: 1.5px dashed var(--border); border-radius: 14px; background: var(--surface); color: var(--muted);
-  cursor: default; user-select: none;
-}
-.badge small { font-size: 0.78rem; font-weight: 600; }
-.badge strong { font-size: 1.15rem; font-weight: 800; color: var(--muted); }
+/* Store badges: official artwork, never filtered/faded/clipped. Clear space >= 1/4 of badge height. */
+.store-badges { --badge-h: 44px; margin: 32px 0 0; min-height: calc(var(--badge-h) * 1.5 + 22px); /* room for the text link, so the swap does not shift the page */ }
+.store-row { display: flex; flex-wrap: wrap; align-items: center; }
+.store-badge { display: inline-block; padding: calc(var(--badge-h) / 4); line-height: 0; }
+.store-badge img { display: block; height: var(--badge-h); width: auto; }
+.store-also-line { margin: 0; padding-inline: calc(var(--badge-h) / 4); font-size: 0.9rem; }
+.store-also { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.store-also:hover { color: var(--text); }
 .hero-visual { position: relative; display: flex; justify-content: center; isolation: isolate; }
 .hero-visual::before {
   content: ""; position: absolute; z-index: -1; inset: 6% -10%;
@@ -483,13 +482,9 @@ button.lc:hover { border-color: var(--a-green-2); }
 .invite-icon { display: block; margin: 0 auto 20px; border-radius: 18px; box-shadow: var(--shadow); }
 .invite h1 { font-size: clamp(1.7rem, 5vw, 2.4rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin: 0 0 12px; }
 .invite .lead { margin-inline: auto; }
-.invite-badges { justify-content: center; margin-top: 28px; }
-a.badge.is-live {
-  border-style: solid; border-color: var(--primary); color: var(--text); cursor: pointer; user-select: auto;
-  text-decoration: none; text-align: left;
-}
-a.badge.is-live strong { color: var(--primary); }
-a.badge.is-live:hover { background: var(--primary-soft); }
+.invite-badges { margin-top: 28px; }
+.invite-badges .store-row { justify-content: center; }
+.invite-badges .store-also-line { text-align: center; }
 .invite-tip {
   margin: 24px auto 0; padding: 12px 16px; max-width: 26rem; border-radius: 14px;
   background: var(--accent-soft); color: var(--text); font-size: 0.95rem;
