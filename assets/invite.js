@@ -7,9 +7,7 @@
 (function () {
   'use strict';
 
-  // Store URLs and availability live in /assets/stores.js (window.ANOTOU_STORES),
-  // which also renders the badges and the iOS Smart App Banner.
-  var STORES = window.ANOTOU_STORES || {};
+  // Store URLs, platform detection and the badges live in /assets/stores.js.
 
   // /l/<token> (optional trailing slash). Anything else, including /invite/, is the generic version.
   function readToken() {
@@ -21,35 +19,20 @@
     return /^[A-Za-z0-9._~-]{1,512}$/.test(token) ? token : null;
   }
 
-  function isIOS() {
-    var ua = navigator.userAgent || '';
-    if (/iPhone|iPad|iPod/i.test(ua)) return true;
-    // iPadOS reports itself as a Mac; tell them apart by touch support.
-    return /Macintosh/i.test(ua) && navigator.maxTouchPoints > 1;
-  }
-
   function show(sel, on) {
     var nodes = document.querySelectorAll(sel);
     for (var i = 0; i < nodes.length; i++) nodes[i].hidden = !on;
   }
 
   var token = readToken();
-  var ios = isIOS();
+  var ios = window.ANOTOU_STORES_API && window.ANOTOU_STORES_API.detectPlatform(navigator.userAgent, navigator.maxTouchPoints) === 'ios';
 
   show('[data-invite="with-token"]', !!token);
   show('[data-invite="generic"]', !token);
   show('[data-invite="ios-tip"]', ios);
 
-  // Google Play: with a token, pass it as the install referrer ("invite=<token>", URL-encoded).
-  // stores.js uses data-store-href when it renders the badge (only if PLAY_STORE_AVAILABLE).
-  var playItem = document.querySelector('[data-store="play"]');
-  if (playItem && token && STORES.PLAY_STORE_URL) {
-    playItem.setAttribute('data-store-href',
-      STORES.PLAY_STORE_URL + '&referrer=' + encodeURIComponent('invite=' + token));
-  }
-
-  var appItem = document.querySelector('[data-store="appstore"]');
-
-  // On iPhone/iPad, list the App Store first.
-  if (ios && appItem && appItem.parentNode) appItem.parentNode.insertBefore(appItem, appItem.parentNode.firstChild);
+  // Google Play: with a token, pass it as the install referrer ("invite=<token>").
+  // stores.js appends it (URL-encoded) to the Play links when it renders the badges.
+  var badges = document.querySelector('[data-store-badges]');
+  if (badges && token) badges.setAttribute('data-play-referrer', 'invite=' + token);
 })();
